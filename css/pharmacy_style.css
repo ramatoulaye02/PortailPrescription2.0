@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 2rem;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #ddd;
+}
+
+/* Orders Section */
+#orders {
+    padding: 2rem;
+    text-align: center;
+}
+
+#order-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the cards */
+    gap: 1rem; /* Add consistent spacing */
+}
+
+/* Order Cards */
+.order-card {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.order-card h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.order-card p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Button Styles */
+button.update-status {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 0.9rem;
+}
+
+button.update-status[data-status="Fulfilled"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button.update-status[data-status="Cancelled"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.update-status:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+button.update-status:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Actions Container */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
